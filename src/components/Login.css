@@ -1,0 +1,56 @@
+.loginForm{
+  display: flex;
+  flex-direction: column;
+  margin: 200px 500px 200px 500px;
+  gap: 25px;
+  border: 2px solid black;
+  padding: 20px;
+  font-size: 20px;
+  border-radius: 1%;
+}
+
+.userName{
+  font-size: 20px;
+  border-top: 5px;
+  border-left: 5px;
+  border-right: 5px;
+  padding: 0px 5px 0px 5px;
+  border-radius: 2px;
+}
+
+.userName:focus{
+  outline: none;
+  border-color: #22d3ee;
+}
+.userPassword {
+  font-size: 20px;
+  border-top: 5px;
+  border-left: 5px;
+  border-right: 5px;
+  padding: 0px 5px 0px 5px;
+  border-radius: 2px;
+}
+
+.userPassword:focus{
+  outline: none;
+  border-color: #22d3ee;
+}
+
+.submitButton{
+  font-size: 20px;
+  padding: 6px;
+  margin: 0px 200px 0px 200px;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  border-color: #22d3ee;
+  background-color: #22d3ee;
+  color: white
+}
+
+.submitButton:hover{
+  cursor: pointer;
+  background-color: white;
+  color:#22d3ee
+
+}

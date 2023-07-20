@@ -1,18 +1,25 @@
 import React from "react";
+import './Login.css';
 import { useNavigate } from "react-router-dom";
 
 
 const Login = ({storeUserName, storeUserPassword}) => {
   
   const nav = useNavigate();
-  
+
   const handleSubmit = () => {nav('/display')};
 
   return (
-    <div className="Main">
+    <form
+      className="loginForm"
+      onSubmit={() => {
+        handleSubmit();
+      }}
+    >
       <label className="userNameLabel">User Name:</label>
       <input
         className="userName"
+        placeholder="Enter your Name Here..."
         onChange={(e) => {
           storeUserName(e);
         }}
@@ -22,19 +29,14 @@ const Login = ({storeUserName, storeUserPassword}) => {
       <input
         className="userPassword"
         type="password"
+        placeholder="Enter your Password Here..."
         onChange={(event) => {
           storeUserPassword(event);
         }}
       />
 
-      <button
-        onClick={() => {
-          handleSubmit();
-        }}
-      >
-        Submit
-      </button>
-    </div>
+      <input className="submitButton" type="submit" />
+    </form>
   );
 };
 
