@@ -2,20 +2,29 @@ import { useState } from 'react'
 
 import './App.css'
 import React from 'react'
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Login from './components/Login';
+import Display from './components/Display';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [userName, setUserName] = useState(null);
+  const [userPassword, setUserPassword] = useState(null);
+
+  const storeUserName = (event) => {
+    setUserName(event?.target.value);
+  };
+
+  const storeUserPassword = (event) => {
+    setUserPassword(event?.target.value);
+  };
 
   return (
-    <div className="Main">
-
-        <label className="userNameLabel">User Name:</label>
-        <input className="userNameInput" />
-      
-        <label className="userPasswordLabel">Password:</label>
-        <input className="userPasswordInput" type="password" />
-
-    </div>
+    <BrowserRouter>
+    <Routes>
+      <Route path='/' element={<Login storeUserName={storeUserName} storeUserPassword={storeUserPassword}/>}/>
+      <Route path='/display' element={<Display userName={userName}/>}/>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
