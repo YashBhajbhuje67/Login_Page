@@ -1,12 +1,11 @@
-import { useState } from 'react'
-import React from 'react'
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Login from './components/Login';
-import Display from './components/Display';
+import React, { useState } from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Display from "./components/Display";
+import Login from "./components/Login";
 
 function App() {
-  const [userName, setUserName] = useState(null);
-  const [userPassword, setUserPassword] = useState(null);
+  const [userName, setUserName] = useState("");
+  const [userPassword, setUserPassword] = useState("");
 
   const storeUserName = (event) => {
     setUserName(event?.target.value);
@@ -18,12 +17,22 @@ function App() {
 
   return (
     <BrowserRouter>
-    <Routes>
-      <Route path='/' element={<Login storeUserName={storeUserName} storeUserPassword={storeUserPassword}/>}/>
-      <Route path='/display' element={<Display userName={userName}/>}/>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <Login
+              storeUserName={storeUserName}
+              storeUserPassword={storeUserPassword}
+              userName={userName}
+              userPassword={userPassword}
+            />
+          }
+        />
+        <Route path="/display" element={<Display userName={userName} />} />
       </Routes>
     </BrowserRouter>
   );
 }
 
-export default App
+export default App;

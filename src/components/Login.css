@@ -1,45 +1,52 @@
 .loginForm{
   display: flex;
   flex-direction: column;
-  margin: 200px 500px 200px 500px;
-  gap: 25px;
+  margin: 200px 520px 200px 520px;
+  gap: 20px;
   border: 2px solid black;
   padding: 20px;
   font-size: 20px;
   border-radius: 1%;
+  
+}
+.userNameLabel{
+  padding-left: 2px;
+}
+
+.userPasswordLabel{
+  padding-left: 2px;
 }
 
 .userName{
   font-size: 20px;
-  border-top: 5px;
-  border-left: 5px;
-  border-right: 5px;
-  padding: 0px 5px 0px 5px;
+  border: none;
+  border-bottom: 2px solid black;
+  padding: 2px 5px 2px 5px;
   border-radius: 2px;
 }
 
 .userName:focus{
   outline: none;
-  border-color: #22d3ee;
+  border-color: #0891b2;
 }
 .userPassword {
   font-size: 20px;
-  border-top: 5px;
-  border-left: 5px;
-  border-right: 5px;
-  padding: 0px 5px 0px 5px;
+  border: none;
+  margin-bottom: 15px;
+  border-bottom: 2px solid black;
+  padding: 2px 5px 2px 5px;
   border-radius: 2px;
 }
 
 .userPassword:focus{
   outline: none;
-  border-color: #22d3ee;
+  border-color: #0891b2;
 }
 
 .submitButton{
   font-size: 20px;
   padding: 6px;
-  margin: 0px 200px 0px 200px;
+  margin: 0px 250px 0px 250px;
   background-color: white;
   border: 1px solid black;
   border-radius: 5px;
