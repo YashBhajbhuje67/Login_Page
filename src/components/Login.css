@@ -46,7 +46,7 @@
 .submitButton{
   font-size: 20px;
   padding: 6px;
-  margin: 0px 250px 0px 250px;
+  margin: 0vw 5vw 0vw 5vw;
   background-color: white;
   border: 1px solid black;
   border-radius: 5px;
@@ -59,5 +59,4 @@
   cursor: pointer;
   background-color: white;
   color:#22d3ee
-
 }
